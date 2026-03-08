@@ -1,12 +1,25 @@
-import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component } from '@angular/core';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { HeroComponent } from './components/hero/hero.component';
+import { AboutComponent } from './components/about/about.component';
+import { ServicesComponent } from './components/services/services.component';
+import { CertificatesComponent } from './components/certificates/certificates.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: true,
+  imports: [
+    NavbarComponent,
+    HeroComponent,
+    AboutComponent,
+    ServicesComponent,
+    CertificatesComponent,
+    ContactComponent,
+    FooterComponent,
+  ],
   templateUrl: './app.html',
-  styleUrl: './app.scss'
+  styleUrl: './app.scss',
 })
-export class App {
-  protected readonly title = signal('avraham-therapy');
-}
+export class App {}
